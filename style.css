@@ -1,16 +1,13 @@
 *{box-sizing: border-box;}
+/*Setting up the main page*/
 body{
+  display: flex;
   margin:10%;
   background-color: blue;
   background-image: url("images/bg3.jpg");
   background-position: center;
-  display: flex;
+  background-size: 100%;
   justify-content: center;
-}
-a { 
-  color:black;
-  text-decoration: none;
-  padding-left: -2px;
 }
 ul{
   padding-left: 8px;
@@ -23,6 +20,14 @@ ul{
   margin-bottom: 5px;
 }
 nav li{line-height: 40px;}
+a { 
+  color:darkgray;
+  text-decoration: none;
+  padding-left: -2px;
+}
+a:hover{
+  color: black;
+}
 
 footer{
   position: fixed;
@@ -33,21 +38,23 @@ footer{
   background-color: black;
 }
 .news{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 24px;
   color: yellow;
   margin-top: 3px;
 }
-
 .title{
   margin-top: -10%;
   margin-left: 40%;
   width: 60%;
 }
+
+/*Setting up the menu*/
 #window{
   width: 200px;
   position: absolute;
-  z-index: 9;
+  z-index: 3;
+
   background-color: gainsboro;
   border: 1px solid grey;
   text-align: left;
@@ -58,11 +65,16 @@ footer{
   padding: 10px;
   padding-top:5px;
   padding-bottom: 5px;
+  z-index: 4;
   cursor: move;
-  z-index: 10;
+
   background-color: #0A58B5;
   color: #fff;
   font-family:Arial, Helvetica, sans-serif;
   font-variant-caps: all-small-caps;
   font-size: 24px;
+}
+/*Modal Time!*/
+.model{
+
 }
