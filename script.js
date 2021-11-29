@@ -65,4 +65,4 @@ setInterval(function() {
       if (i == images.length) {
       	i =  0;
       }
-}, 1500);
+}, 3000);
