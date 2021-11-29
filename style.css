@@ -60,6 +60,7 @@ footer{
   border: 1px solid grey;
   text-align: left;
   padding:2px;
+  overflow: none;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
 #menu{
@@ -68,7 +69,6 @@ footer{
   padding-bottom: 5px;
   z-index: 3;
   cursor: move;
-
   background-color: #0A58B5;
   color: #fff;
   font-family:Arial, Helvetica, sans-serif;
