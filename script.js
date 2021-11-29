@@ -33,13 +33,11 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-
+//Modal code by W3 Schools
 // Get the modal
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("mlist");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
@@ -50,3 +48,21 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//the background that changes. Shouts out to 'fnune' from stackoverflow.com
+var images = [
+  "images/bg1.jpg",
+  "images/bg2.jpg",
+  "images/bg3.jpg",
+  "images/bg4.jpg",
+]
+var imageHead = document.getElementById("background");
+var i = 0;
+
+setInterval(function() {
+      imageHead.style.backgroundImage = "url(" + images[i] + ")";
+      i = i + 1;
+      if (i == images.length) {
+      	i =  0;
+      }
+}, 1500);
