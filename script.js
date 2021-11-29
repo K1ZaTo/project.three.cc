@@ -7,7 +7,6 @@ function dragElement(elmnt) {
   } else {
     elmnt.onmousedown = dragMouseDown;
   }
-
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
@@ -33,6 +32,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
 //Modal code by W3 Schools
 // Get the modal
 var modal = document.getElementById("myModal");

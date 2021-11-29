@@ -44,7 +44,7 @@ footer{
 }
 .background{
   background-color: blue;
-  background-image: url("images/bg3.jpg");
+  background-image:url("images/bg3.jpg");
   background-position: center;
   background-size: cover;
   justify-content: center;
@@ -52,9 +52,10 @@ footer{
 
 /*Setting up the menu*/
 #window{
+  flex: 1;
   width: 200px;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   background-color: gainsboro;
   border: 1px solid grey;
   text-align: left;
@@ -65,7 +66,7 @@ footer{
   padding: 10px;
   padding-top:5px;
   padding-bottom: 5px;
-  z-index: 4;
+  z-index: 3;
   cursor: move;
 
   background-color: #0A58B5;
