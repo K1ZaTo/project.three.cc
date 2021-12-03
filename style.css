@@ -1,27 +1,23 @@
 *{box-sizing: border-box;}
 /*Setting up the page*/
 body{
+  font-family:Arial, sans-serif;
   display: flex;
   margin:10%;
 }
-ul{
-  padding-left: 8px;
-  padding-top: none;
-  padding-bottom: none;
-  list-style-type: none;
-  font-family:Arial, sans-serif;
-  font-size: 18px;
-  margin-top: 2px;
-  margin-bottom: 5px;
-}
-nav li{line-height: 40px;}
 a { 
+  margin: auto;
+  display:block;
+  list-style-type: none;
+  font-size: 18px;
+  padding-left: 10px;
   color:darkgray;
   text-decoration: none;
-  padding-left: -2px;
+  line-height: 35px;
 }
 a:hover{
   color: black;
+  cursor:pointer;
 }
 footer{
   position: fixed;
@@ -49,7 +45,25 @@ footer{
   background-size: cover;
   justify-content: center;
 }
-
+.album{
+  margin: auto;
+  padding: 1%;
+  width: 46%;
+  height: 45%;
+  object-fit: cover;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+.listen{
+  display: inline;
+  margin: auto;
+}
+.tour{
+  margin-left: -50%;
+  margin-bottom: 30%;
+  width: 33%;
+}
+.tour2{margin: 5%; width: 40%;  box-shadow: 6px 6px 12px rgba(0, 0, 240, 0.5);}
+.tix{display:inline-block; font-family: 'Times New Roman', Times, serif; border-bottom:10%; font-size: 96px;color: blue;line-height: normal;}
 /*Setting up the menu*/
 #window{
   flex: 1;
@@ -60,7 +74,6 @@ footer{
   border: 1px solid grey;
   text-align: left;
   padding:2px;
-  overflow:-moz-hidden-unscrollable;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
 #menu{
@@ -71,12 +84,12 @@ footer{
   cursor: move;
   background-color: #0A58B5;
   color: #fff;
-  font-family:Arial, Helvetica, sans-serif;
   font-variant-caps: all-small-caps;
   font-size: 24px;
 }
 /*Modal Time! Most of this code is lifted from W3 Schools*/
 .modal{
+  margin: auto;
   display: none;
   position: fixed;
   z-index: 1;
@@ -89,11 +102,11 @@ footer{
 }
 .modal-content {
   background-color: gainsboro;
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 5% auto;
   padding: 20px;
   border: 1px solid grey;
   width: 80%;
   height: 80%;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
-.modpic{width:60%;justify-content: center;}
+

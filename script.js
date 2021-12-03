@@ -34,20 +34,30 @@ function dragElement(elmnt) {
 }
 
 //Modal code by W3 Schools
-// Get the modal
-var modal = document.getElementById("myModal");
+var modalparent = document.getElementsByClassName("modal_multi");
 // Get the button that opens the modal
-var btn = document.getElementById("mlist");
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+// When the user clicks the button, open the modal
+function setDataIndex() {
+  for (i = 0; i < modal_btn_multi.length; i++) {
+    modal_btn_multi[i].setAttribute('data-index', i);
+    modalparent[i].setAttribute('data-index', i);
   }
 }
+for (i = 0; i < modal_btn_multi.length; i++) {
+  modal_btn_multi[i].onclick = function () {
+    var ElementIndex = this.getAttribute('data-index');
+    modalparent[ElementIndex].style.display = "block";
+  };
+}
+window.onload = function () {
+  setDataIndex();
+};
+window.onclick = function (event) {
+  if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+    modalparent[event.target.getAttribute('data-index')].style.display = "none";
+  }
+};
 
 //the background that changes. Shouts out to 'fnune' from stackoverflow.com
 var images = [
@@ -56,7 +66,7 @@ var images = [
   "images/bg3.jpg",
   "images/bg4.jpg",
 ]
-var imageHead = document.getElementById("background");
+var imageHead = document.getElementById("switch");
 var i = 0;
 
 setInterval(function() {
